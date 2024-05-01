@@ -1,3 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar img {
+    height: 40px;
+    margin-right: 10px;
+}
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.navbar-toggle:hover {
+    color: #f8f9fa;
+}
+.theme-switch {
+    display: flex;
+    align-items: center;
+}
+.theme-switch label {
+    margin-right: 10px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    .navbar-title {
+        display: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+}
+.col-12{
+    text-align: center;
+}
 table tr td{
     vertical-align: middle;
 }
@@ -99,3 +152,25 @@ form .inputField > div input{
     color: #000;
     font-size: 18px;
 }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 9999; 
+  }
+  .footer p {
+    margin-bottom: 5px; 
+  }
+  .line {
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 45px; 
+  }

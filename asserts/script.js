@@ -1,3 +1,28 @@
+
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
+const themeIcon = document.getElementById('theme-icon');
+let darkMode = false;
+
+themeIcon.addEventListener('click', () => {
+    darkMode = !darkMode;
+    updateTheme();
+});
+
+function updateTheme() {
+    if (darkMode) {
+        document.body.style.backgroundColor = '#333';
+        themeIcon.innerHTML = '<i class="bi bi-moon"></i>';
+    } else {
+        document.body.style.backgroundColor = '#f0f0f0';
+        themeIcon.innerHTML = '<i class="bi bi-sun"></i>';
+    }
+}
+
+//navbarToggle.addEventListener('click', () => {
+  //  navbarLinks.classList.toggle('active');
+//});
+
 var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
     file = document.getElementById("imgInput"),
