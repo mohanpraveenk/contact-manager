@@ -1,4 +1,4 @@
-
+//nav bar
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarLinks = document.querySelector('.navbar-links');
 const themeIcon = document.getElementById('theme-icon');
@@ -11,17 +11,20 @@ themeIcon.addEventListener('click', () => {
 
 function updateTheme() {
     if (darkMode) {
+        
+        document.body.classList.add('dark-mode');
         document.body.style.backgroundColor = '#333';
+        document.body.style.color = '#fff';
         themeIcon.innerHTML = '<i class="bi bi-moon"></i>';
+       
     } else {
+        document.body.classList.remove('dark-mode');
         document.body.style.backgroundColor = '#f0f0f0';
+        document.body.style.color = '#000';
         themeIcon.innerHTML = '<i class="bi bi-sun"></i>';
+      
     }
 }
-
-//navbarToggle.addEventListener('click', () => {
-  //  navbarLinks.classList.toggle('active');
-//});
 
 var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
@@ -51,9 +54,8 @@ newUserBtn.addEventListener('click', ()=> {
     form.reset()
 })
 
-
 file.onchange = function(){
-    if(file.files[0].size < 1000000){  // 1MB = 1000000
+    if(file.files[0].size < 1000000){
         var fileReader = new FileReader();
 
         fileReader.onload = function(e){
@@ -64,10 +66,9 @@ file.onchange = function(){
         fileReader.readAsDataURL(file.files[0])
     }
     else{
-        alert("This file is too large!")
+        alert("This file is too large")
     }
 }
-
 
 function showInfo(){
     document.querySelectorAll('.employeeDetails').forEach(info => info.remove())
@@ -81,7 +82,6 @@ function showInfo(){
             <td>${element.employeePhone}</td>
             <td>${element.startDate}</td>
 
-            
             <td>
                 <button class="btn btn-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}', '${element.employeePhone}',  '${element.startDate}')" data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
 
@@ -91,13 +91,10 @@ function showInfo(){
                             
             </td>
         </tr>`
-
         userInfo.innerHTML += createElement
     })
 }
 showInfo()
-
-
 function readInfo(pic, name, age, city, email, phone, post, sDate){
     document.querySelector('.showImg').src = pic,
     document.querySelector('#showName').value = name,
@@ -106,7 +103,6 @@ function readInfo(pic, name, age, city, email, phone, post, sDate){
     document.querySelector("#showPhone").value = phone,
     document.querySelector("#showsDate").value = sDate
 }
-
 
 function editInfo(index, pic, name,  City, Email, Phone,  Sdate){
     isEdit = true
@@ -122,15 +118,13 @@ function editInfo(index, pic, name,  City, Email, Phone,  Sdate){
     modalTitle.innerText = "Update The Form"
 }
 
-
 function deleteInfo(index){
-    if(confirm("Are you sure want to delete?")){
+    if(confirm("do you want to delete this contact ?")){
         getData.splice(index, 1)
         localStorage.setItem("userProfile", JSON.stringify(getData))
         showInfo()
     }
 }
-
 
 form.addEventListener('submit', (e)=> {
     e.preventDefault()
@@ -162,7 +156,4 @@ form.addEventListener('submit', (e)=> {
     form.reset()
 
     imgInput.src = "./image/Profile Icon.webp"  
-
-    // modal.style.display = "none"
-    // document.querySelector(".modal-backdrop").remove()
 })

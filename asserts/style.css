@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s color 0.3s;
 }
 .navbar {
     background-color: #007bff;
@@ -49,6 +49,9 @@ body {
     }
 }
 .col-12{
+    margin-top: 30px;
+   padding-left: 0%;
+   padding-right: 0%;
     text-align: center;
 }
 table tr td{
@@ -63,6 +66,15 @@ td button i{
     font-size: 22px;
 }
 
+
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.dark-mode .table td {
+    color: #fff;
+}
 
 .modal-header{
     background: #6c0000;
@@ -174,3 +186,4 @@ form .inputField > div input{
     left: 0;
     bottom: 45px; 
   }
+ 
