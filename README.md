@@ -21,5 +21,5 @@ Important links:
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
-    This website has been hosted in Netlify
-        [text](https://app.netlify.com/sites/contact-manager-swetha-mohanpraveen/overview)
+    This website has been hosted in Netlify:
+            https://contact-manager-swetha-mohanpraveen.netlify.app
