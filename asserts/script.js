@@ -50,7 +50,7 @@ newUserBtn.addEventListener('click', ()=> {
     submitBtn.innerText = 'Submit',
     modalTitle.innerText = "Fill the Details"
     isEdit = false
-    imgInput.src = "./image/Profile Icon.webp"
+    imgInput.src = "./images/formimg.png"
     form.reset()
 })
 
@@ -130,7 +130,7 @@ form.addEventListener('submit', (e)=> {
     e.preventDefault()
 
     const information = {
-        picture: imgInput.src == undefined ? "./image/Profile Icon.webp" : imgInput.src,
+        picture: imgInput.src == undefined ? "./images/formimg.png" : imgInput.src,
         employeeName: userName.value,
         employeeCity: city.value,
         employeeEmail: email.value,
@@ -155,5 +155,5 @@ form.addEventListener('submit', (e)=> {
 
     form.reset()
 
-    imgInput.src = "./image/Profile Icon.webp"  
+    imgInput.src = "images/Profile Icon.webp"  
 })
