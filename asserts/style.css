@@ -6,7 +6,7 @@ body {
     transition: background-color 0.3s color 0.3s;
 }
 .navbar {
-    background-color: #007bff;
+    background-color: #6c0000;
     color: #fff;
     padding: 10px 20px;
     display: flex;
