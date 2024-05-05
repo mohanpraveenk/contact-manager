@@ -15,11 +15,6 @@ Features:
 4.Delete Contact: Contacts can be deleted when no longer needed.
 
 5.Responsive Design: The website is optimized for various screen sizes, ensuring accessibility on desktops, tablets, and mobile devices.
-
-Important links:
-    Bootstrap link:
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
-    This website has been hosted in Netlify:
-            https://contact-manager-swetha-mohanpraveen.netlify.app
+This website has been hosted in Netlify:
+     https://contact-manager-swetha-mohanpraveen.netlify.app
